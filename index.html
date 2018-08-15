@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width-device-width, initial-scale=1"/>
+
+        <link rel="stylesheet" href="./css/main.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
+    </head>
+    <body>
+        <div id="icons">
+            <a href="https://www.linkedin.com/in/robert-jardine-30784390" target="_blank"><span id="li-button" class="fa fa-linkedin"></span></a>
+            <a href="https://github.com/yumewokanaeyou" target="_blank"><span id="gh-button" class="fa fa-github"></span></a>
+        </div>
+        <div>
+            <span id="background-word"></span>
+        </div>
+
+        <div id="main-content">
+            <h1 id="header">Hello, I'm Robert Jardine</h1>
+            <span id="boku-ha">開発者</span>
+            <p><span id="prefix">I am a </span><span id="i-am">. . .</span></p>
+            <span>休憩無し、上達して行く</span>
+            <p>My goal is to continuously learn and grow</p>
+            <span>プロジェクトなどを是非ご覧下さい</span>
+            <p>Checkout some of my work below</p>
+            
+            <div id="expand">
+                <span class="fa fa-chevron-down" onclick="showHidden()"></span>
+            </div>
+        </div>
+
+        <div id="hidden-content">
+            <div id="return">
+                <span class="fa fa-chevron-up" onclick="showHome()"></span>
+            </div>
+            <a href="https://github.com/yumewokanaeyou/Rob-BOT-Music" target="_blank">
+                <div class="project">
+                    <img class="project-image" src="./images/robbot.png">
+                    <span class="project-info">
+                        <p>Create a</p>
+                        <p>personal playlist</p>
+                        <p>with the help of a</p>
+                        <p>neural network</p>
+                    </span>
+                </div>
+            </a>
+            <a href="https://github.com/yumewokanaeyou/WoRdZ-Android" target="_blank">
+                <div id="wordz" class="project">
+                    <div class="project-image">
+                        <p>WoRdZ</p>
+                        <p>Android</p>
+                    </div>
+                    <span class="project-info">
+                        <p>Word game</p>
+                        <p>for</p>
+                        <p>Android</p>
+                    </span>
+                </div>
+            </a>
+        </div>
+    </body>
+</html>
