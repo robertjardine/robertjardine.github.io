@@ -53,7 +53,7 @@ p {
 }
 
 #expand:hover, #return:hover {
-    color: red;
+    color: red !important;
 }
 
 #main-content {
@@ -104,6 +104,25 @@ p {
     margin: 5%;
 }
 
+.project-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;
+    position: absolute;
+    margin-bottom: 5px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.project-button {
+    border: 1px solid #000000;
+    background-color: #000000;
+    color: #ffffff;
+}
+
 .project-image {
     width: 100%;
     height: auto;
@@ -118,14 +137,18 @@ p {
     right: 0;
 }
 
-.project:hover {
+.project-button:hover {
     cursor: pointer;
 }
 
 .project:hover .project-image {
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .project:hover .project-info {
+    visibility: visible;
+}
+
+.project:hover .project-links {
     visibility: visible;
 }

@@ -31,6 +31,7 @@ function cycleTitle() {
     
     setInterval(function() {
         if (wordIndex >= words.length) {
+            pulseArrow();
             wordIndex = 0;
         }
 
@@ -62,4 +63,19 @@ function cycleTitle() {
             wordIndex++;
         });
     }, 2000);
+}
+
+function pulseArrow() {
+    $("#expand").css({
+        transition: 'transform 2s',
+        transform:  'scale(3)',
+        color: 'red'
+    });
+    setTimeout(() => {
+        $("#expand").css({
+            transition: 'transform 2s',
+            transform:  'scale(1)',
+            color: 'white'
+        });
+    }, 3000);
 }
