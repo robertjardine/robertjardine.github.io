@@ -11,11 +11,6 @@
         width: 80% !important;
         margin: auto;
     }
-
-    #nav {
-        margin-right: 20% !important;
-        margin-left: 20% !important;
-    }
 }
 
 /***************** Shared *****************/
@@ -96,7 +91,11 @@ p {
     margin-bottom: 100px;
     margin-right: 30%;
     margin-left: 30%;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+#nav span {
+    margin-right: 25px;
 }
 
 #console-name {
