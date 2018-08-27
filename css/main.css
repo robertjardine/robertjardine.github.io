@@ -1,3 +1,37 @@
+@media only screen and (max-width: 767px) {
+    h1, p, span {
+        font-size: 18px !important;
+    }
+
+    .row {
+        flex-direction: column !important;
+    }
+
+    .card {
+        width: 80% !important;
+        margin: auto;
+    }
+
+    #nav {
+        margin-right: 20% !important;
+        margin-left: 20% !important;
+    }
+}
+
+/***************** Shared *****************/
+
+.selected-nav-tab {
+    opacity: 1.0;
+}
+
+.nav-tab {
+    opacity: 0.60;
+}
+
+#nav span:hover {
+    cursor: pointer;
+}
+
 body {
     background-color: #111116;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -13,47 +47,65 @@ h1, p, span {
 }
 
 h1 {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 25px;
+    margin-bottom: 25px;
     font-size: 32px;
     font-weight: 300;
 }
 
 p {
-    margin-bottom: 5%;
+    margin-bottom: 25px;
     font-size: 22px;
     font-weight: 200;
 }
 
+#icons {
+    position: fixed;
+    width: 20%;
+    top: 10px;
+    right: 10px;
+}
+
+#icons span {
+    float: right;
+    margin: 10px;
+}
+
+#li-button, #gh-button, .project-button {
+    color: #ffffff;
+}
+
+#li-button:hover {
+    color: #0073b1;
+}
+
+#gh-button:hover, .fa-github:hover {
+    color: #9d27b0;
+}
+
+.fa-external-link:hover {
+    color: rgb(0, 0, 255);
+}
+
+/***************** Home Page *****************/
+
+#nav {
+    display: flex;
+    flex-basis: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 30%;
+    margin-left: 30%;
+    justify-content: space-around;
+}
+
+#console-name {
+    margin-bottom: 5%;
+    font-size: 25px;
+}
+
 #i-am {
     color: #ff9d00;
-}
-
-#do {
-    color: #ff3b3b;
-}
-
-#background-word {
-    position: fixed;
-    opacity: 0.4;
-}
-
-#nav-tabs {
-    margin: auto;
-    width: 20%;
-    padding-top: 25px;
-}
-
-#expand {
-    margin: auto;
-    margin-top: 5%;
-    height: 25px;
-    width: 25px;
-    text-align: center;
-}
-
-#expand:hover, #return:hover {
-    color: red !important;
 }
 
 #main-content {
@@ -62,93 +114,62 @@ p {
     text-align: center;
 }
 
-#hidden-content {
+/***************** Project Page *****************/
+#project-content {
     width: 100%;
     height: 100%;
-    text-align: center;
-    display: none
+    display: none;
 }
 
-#icons {
-    position: fixed;
-    width: 5%;
-    top: 10px;
-    right: 10px;
-}
-
-#li-button, #gh-button {
-    color: #ffffff;
-}
-
-#li-button:hover {
-    color: #0073b1;
-}
-
-#gh-button:hover {
-    color: #9d27b0;
-}
-
-#wordz {
-    border: 1px solid red;
-}
-
-#wordz .project-image {
-    color: red;
-    font-size: 32px;
-}
-
-.project {
-    width: 35%;
-    position: relative;
-    float: left;
-    margin: 5%;
+.project-title {
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    left: 50%;
+    right: 50%;
+    z-index: 100;
+    transform: translate(-50%, 0%);
+    font-size: large;
+    height: 30%;
 }
 
 .project-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    visibility: hidden;
     position: absolute;
-    margin-bottom: 5px;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.project-button {
-    border: 1px solid #000000;
-    background-color: #000000;
-    color: #ffffff;
-}
-
-.project-image {
     width: 100%;
-    height: auto;
+    height: 20%;
+    bottom: 0;
+    text-align: center;
 }
 
-.project-info {
-    visibility: hidden;
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ffffff;
+    opacity: 0.20;
+}
+
+.description {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    height: 35%;
+    font-size: small;
+    font-weight: 400;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .project-button:hover {
     cursor: pointer;
 }
 
-.project:hover .project-image {
-    opacity: 0.4;
-}
-
-.project:hover .project-info {
-    visibility: visible;
-}
-
-.project:hover .project-links {
-    visibility: visible;
+.card {
+    position: relative;
+    width: 40%;
 }

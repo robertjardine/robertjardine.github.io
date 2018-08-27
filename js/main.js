@@ -1,19 +1,47 @@
 const VOWELS = 'aeiouAEIOU';
 
 $(document).ready(function() {
-    cycleTitle();
+    typeName();
 });
 
-function showHidden() {
+function showProjects() {
     $("#main-content").fadeOut(200, () => {
-        $("#hidden-content").fadeIn(200);
+        toggleNavBarClass();
+        $("#project-content").fadeIn(200);
     });
 }
 
 function showHome() {
-    $("#hidden-content").fadeOut(200, () => {
+    $("#project-content").fadeOut(200, () => {
+        toggleNavBarClass();
         $("#main-content").fadeIn(200);
     });
+}
+
+function toggleNavBarClass() {
+    $('#nav').children('span').each(function() {
+        if ($(this).hasClass('nav-tab')) {
+            $(this).removeClass('nav-tab');
+            $(this).addClass('selected-nav-tab');
+        } else {
+            $(this).removeClass('selected-nav-tab');
+            $(this).addClass('nav-tab');
+        }
+    });
+}
+
+function typeName() {
+    const text = "I am Robert Jardine";
+    let index = 0;
+    let nameInterval = setInterval(() => {
+        if (index > text.length) {
+            clearInterval(nameInterval);
+            cycleTitle();
+        } else {
+            $('#header').text(text.substring(0, index));
+        }
+        index++;
+    }, 100);
 }
 
 function cycleTitle() {
@@ -31,7 +59,6 @@ function cycleTitle() {
     
     setInterval(function() {
         if (wordIndex >= words.length) {
-            pulseArrow();
             wordIndex = 0;
         }
 
@@ -63,19 +90,4 @@ function cycleTitle() {
             wordIndex++;
         });
     }, 2000);
-}
-
-function pulseArrow() {
-    $("#expand").css({
-        transition: 'transform 2s',
-        transform:  'scale(3)',
-        color: 'red'
-    });
-    setTimeout(() => {
-        $("#expand").css({
-            transition: 'transform 2s',
-            transform:  'scale(1)',
-            color: 'white'
-        });
-    }, 3000);
 }
