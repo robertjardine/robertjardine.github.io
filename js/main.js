@@ -45,15 +45,15 @@ function typeName() {
 }
 
 function cycleTitle() {
-    let words = [
+    const words = [
         'Software Engineer', 'Japanese Speaker', 'DevOps Engineer', 'Software Developer', 'Martial Artist',
         'Coder', 'Backend Developer', 'English Speaker', 'Programmer', 'Frontend Developer', 'Full Stack Developer'
     ];
-    let wordsJapanese = [
+    const wordsJapanese = [
         'ソフトウェアエンジニア', '日本語話者', 'DevOpsエンジニア', '開発者', '武道家', 'コーダー',  
         'バックエンドディベロッパー', '英語話者', 'プログラマ', 'フロントエンドディベロッパー', 'フルスタックディベロッパー'
     ];
-    let wordColors = ['#ff9d00', '#ff7272', '#fffb00', '#46ff00', '#00ffec', '#6785ff', '#d183ff', '#ff00c4'];
+    const wordColors = ['#ff9d00', '#ff7272', '#fffb00', '#46ff00', '#00ffec', '#6785ff', '#d183ff', '#ff00c4'];
     let wordIndex = 0;
     let colorIndex =  Math.floor(Math.random() * wordColors.length);
     
