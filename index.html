@@ -1,75 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Welcome - Robert Jardine</title>
 
-        <link rel="stylesheet" href="./css/main.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="./js/main.js"></script>
-    </head>
-    <body>
-        <div id="icons">
-            <a href="https://www.linkedin.com/in/robert-jardine-30784390" target="_blank">
-                <span id="li-button" class="fa fa-linkedin fa-2x"></span>
-            </a>
-            <a href="https://github.com/yumewokanaeyou" target="_blank">
-                <span id="gh-button" class="fa fa-github fa-2x"></span>
-            </a>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="./images/favicon.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+    <link rel="shortcut icon" type="image/gif" href="./images/favicon.png" />
+
+    <title>Welcome - Robert Jardine</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <div id="icons">
+        <a href="https://www.linkedin.com/in/robert-jardine-30784390" target="_blank">
+            <span id="li-button" class="fa fa-linkedin fa-2x"></span>
+        </a>
+        <a href="https://github.com/robertjardine" target="_blank">
+            <span id="gh-button" class="fa fa-github fa-2x"></span>
+        </a>
+    </div>
+
+    <div id="nav">
+        <span class="selected-nav-tab" onclick="showHome()">Home</span>
+        <span class="nav-tab" onclick="showProjects()">Projects</span>
+    </div>
+
+    <div id="main-content">
+        <div id="console-name">
+            <span id="header"></span>
+            <span id="block-char">&#9611</span>
         </div>
+        <p id="boku-ha">。。。</p>
+        <p><span id="prefix">I am a </span><span id="i-am">. . .</span></p>
+        <p>休憩無し、上達して行く</p>
+        <p>My goal is to continuously learn and grow</p>
+        <p>プロジェクトなどを是非ご覧下さい</p>
+        <p>Checkout some of my work</p>
+    </div>
 
-        <div id="nav">
-            <span class="selected-nav-tab" onclick="showHome()">Home</span>
-            <span class="nav-tab" onclick="showProjects()">Projects</span>
-        </div>
-
-        <div id="main-content">
-            <div id="console-name">
-                <span id="header"></span>
-                <span id="block-char">&#9611</span>
-            </div>
-            <p id="boku-ha">。。。</p>
-            <p><span id="prefix">I am a </span><span id="i-am">. . .</span></p>
-            <p>休憩無し、上達して行く</p>
-            <p>My goal is to continuously learn and grow</p>
-            <p>プロジェクトなどを是非ご覧下さい</p>
-            <p>Checkout some of my work</p>
-        </div>
-
-        <div id="project-content">
-            <div class="row">
-                <div class="card">
-                    <span class="project-title">Rob-BOT-Music</span>
-                    <img class="project-image" src="./images/robbot.png">
-                    <p class="description">
-                        Generate a playlist using the Spotify public API 
-                        and Brain.js
-                    </p>    
-                    <div class="project-links">
-                        <a href="https://github.com/yumewokanaeyou/Rob-BOT-Music" target="_blank">
-                            <span class="project-button fa fa-2x fa-github"></span></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <span class="project-title">Air-Quality Monitor</span>
-                    <img src="./images/air-quality-project.png" class="project-image"/>
-                    <p class="description">
-                        Google Maps API and OpenAQ API to monitor air quality
-                    </p>   
-                    <div class="project-links">
-                        <a href="https://yumewokanaeyou.github.io/Air-Quality-Web-App" target="_blank">
-                            <span class="project-button fa fa-2x fa-external-link"></span>
-                        </a>
-                        <a href="https://github.com/yumewokanaeyou/Air-Quality-Web-App" target="_blank">
-                            <span class="project-button fa fa-2x fa-github"></span>
-                        </a>
-                    </div>
+    <div id="project-content">
+        <div class="row">
+            <div class="card">
+                <span class="project-title">Rob-BOT-Music</span>
+                <img class="project-image" src="./images/robbot.png">
+                <p class="description">
+                    Generate a playlist using the Spotify public API
+                    and Brain.js
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/robertjardine/Rob-BOT-Music" target="_blank">
+                        <span class="project-button fa fa-2x fa-github"></span></a>
                 </div>
             </div>
+            <div class="card">
+                <span class="project-title">Air-Quality Monitor</span>
+                <img src="./images/air-quality-project.png" class="project-image" />
+                <p class="description">
+                    Google Maps API and OpenAQ API to monitor air quality
+                </p>
+                <div class="project-links">
+                    <a href="https://robertjardine.github.io/Air-Quality-Web-App" target="_blank">
+                        <span class="project-button fa fa-2x fa-external-link"></span>
+                    </a>
+                    <a href="https://github.com/robertjardine/Air-Quality-Web-App" target="_blank">
+                        <span class="project-button fa fa-2x fa-github"></span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
